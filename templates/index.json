@@ -53,13 +53,6 @@
     "logo_list_CqqKF4": {
       "type": "logo-list",
       "blocks": {
-        "logo_kcRF3G": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
         "logo_gCHQiD": {
           "type": "logo",
           "settings": {
@@ -90,7 +83,6 @@
         }
       },
       "block_order": [
-        "logo_kcRF3G",
         "logo_gCHQiD",
         "logo_xDKVDz",
         "logo_mydgXb",
