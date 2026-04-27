@@ -190,19 +190,16 @@
         },
         "video_JgRM7W": {
           "type": "video",
-          "settings": {}
-        },
-        "video_Ee9Frq": {
-          "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/99eab05e2b0843aab337c3ba9a535ab2.HD-1080p-2.5Mbps-80538480.mp4"
+          }
         }
       },
       "block_order": [
         "video_LrYFwT",
         "video_agQCaU",
         "video_8Nd3kC",
-        "video_JgRM7W",
-        "video_Ee9Frq"
+        "video_JgRM7W"
       ],
       "name": "UGC Vidéos",
       "settings": {
