@@ -1,6 +1,704 @@
+{% doc %}
+  @prompt
+    <section class="ugc-section">
+      <div class="ugc-header">
+        <p class="ugc-label">Sans filtre — vrais résultats</p>
+        <h2 class="ugc-title">Ils ont testé. Voici leur vérité.</h2>
+        <p class="ugc-sub">Des clients qui voulaient juste se sentir normaux</p>
+      </div>
+    
+      <div class="ugc-wrapper">
+    
+        <!-- FLECHE GAUCHE -->
+        <button class="ugc-arrow ugc-prev" onclick="ugcScroll(-1)">&#8592;</button>
+    
+        <!-- CAROUSEL -->
+        <div class="ugc-track" id="ugcTrack">
+    
+          <!-- CARTE 1 -->
+          <div class="ugc-card" onclick="ugcPlay(this)">
+            <img class="ugc-thumb" src="URL_MINIATURE_1.jpg">
+            <video class="ugc-video" loop playsinline>
+              <source src="URL_VIDEO_1.mp4" type="video/mp4">
+            </video>
+            <div class="ugc-play-btn">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <div class="ugc-pause-btn" style="display:none">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            </div>
+          </div>
+    
+          <!-- CARTE 2 -->
+          <div class="ugc-card" onclick="ugcPlay(this)">
+            <img class="ugc-thumb" src="URL_MINIATURE_2.jpg">
+            <video class="ugc-video" loop playsinline>
+              <source src="URL_VIDEO_2.mp4" type="video/mp4">
+            </video>
+            <div class="ugc-play-btn">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <div class="ugc-pause-btn" style="display:none">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            </div>
+          </div>
+    
+          <!-- CARTE 3 -->
+          <div class="ugc-card" onclick="ugcPlay(this)">
+            <img class="ugc-thumb" src="URL_MINIATURE_3.jpg">
+            <video class="ugc-video" loop playsinline>
+              <source src="URL_VIDEO_3.mp4" type="video/mp4">
+            </video>
+            <div class="ugc-play-btn">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <div class="ugc-pause-btn" style="display:none">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            </div>
+          </div>
+    
+          <!-- CARTE 4 -->
+          <div class="ugc-card" onclick="ugcPlay(this)">
+            <img class="ugc-thumb" src="URL_MINIATURE_4.jpg">
+            <video class="ugc-video" loop playsinline>
+              <source src="URL_VIDEO_4.mp4" type="video/mp4">
+            </video>
+            <div class="ugc-play-btn">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <div class="ugc-pause-btn" style="display:none">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            </div>
+          </div>
+    
+          <!-- CARTE 5 -->
+          <div class="ugc-card" onclick="ugcPlay(this)">
+            <img class="ugc-thumb" src="URL_MINIATURE_5.jpg">
+            <video class="ugc-video" loop playsinline>
+              <source src="URL_VIDEO_5.mp4" type="video/mp4">
+            </video>
+            <div class="ugc-play-btn">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+            <div class="ugc-pause-btn" style="display:none">
+              <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+              </svg>
+            </div>
+          </div>
+    
+        </div>
+    
+        <!-- FLECHE DROITE -->
+        <button class="ugc-arrow ugc-next" onclick="ugcScroll(1)">&#8594;</button>
+    
+      </div>
+    </section>
+    
+    <!-- ============ CSS ============ -->
+    <style>
+    .ugc-section {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+      font-family: inherit;
+    }
+    
+    .ugc-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    
+    .ugc-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #111;
+      margin: 0 0 8px;
+    }
+    
+    .ugc-sub {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 32px;
+    }
+    
+    .ugc-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .ugc-track {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 8px 4px 12px;
+    }
+    
+    .ugc-track::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .ugc-card {
+      flex: 0 0 200px;
+      scroll-snap-align: start;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      background: #000;
+      box-shadow: 0 6px 24px rgba(0,0
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-ugc-section-{{ ai_gen_id }} {
+    display: block;
+    padding: 60px 20px;
+    background-color: {{ block.settings.background_color }};
+    text-align: center;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  .ai-ugc-header-{{ ai_gen_id }} {
+    margin-bottom: 32px;
+  }
+
+  .ai-ugc-label-{{ ai_gen_id }} {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: {{ block.settings.label_color }};
+    margin: 0 0 8px;
+  }
+
+  .ai-ugc-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 800;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 8px;
+  }
+
+  .ai-ugc-sub-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0 0 32px;
+  }
+
+  .ai-ugc-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-ugc-track-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.card_gap }}px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 8px 4px 12px;
+    scroll-behavior: smooth;
+  }
+
+  .ai-ugc-track-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-ugc-card-{{ ai_gen_id }} {
+    flex: 0 0 {{ block.settings.card_width }}px;
+    scroll-snap-align: start;
+    border-radius: {{ block.settings.card_border_radius }}px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background: #000;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    aspect-ratio: 9 / 16;
+  }
+
+  .ai-ugc-thumb-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-ugc-thumb-{{ ai_gen_id }}.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .ai-ugc-video-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .ai-ugc-play-btn-{{ ai_gen_id }},
+  .ai-ugc-pause-btn-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-ugc-play-btn-{{ ai_gen_id }} svg,
+  .ai-ugc-pause-btn-{{ ai_gen_id }} svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+  }
+
+  .ai-ugc-pause-btn-{{ ai_gen_id }} {
+    opacity: 0;
+  }
+
+  .ai-ugc-card-{{ ai_gen_id }}.playing .ai-ugc-play-btn-{{ ai_gen_id }} {
+    opacity: 0;
+  }
+
+  .ai-ugc-card-{{ ai_gen_id }}.playing .ai-ugc-pause-btn-{{ ai_gen_id }} {
+    opacity: 1;
+  }
+
+  .ai-ugc-arrow-{{ ai_gen_id }} {
+    background: {{ block.settings.arrow_background }};
+    color: {{ block.settings.arrow_color }};
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-ugc-arrow-{{ ai_gen_id }}:hover {
+    background: {{ block.settings.arrow_hover_background }};
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-ugc-section-{{ ai_gen_id }} {
+      padding: 40px 16px;
+    }
+
+    .ai-ugc-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.7 }}px;
+    }
+
+    .ai-ugc-card-{{ ai_gen_id }} {
+      flex: 0 0 {{ block.settings.card_width | times: 0.7 }}px;
+    }
+
+    .ai-ugc-arrow-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<ugc-carousel-{{ ai_gen_id }} class="ai-ugc-section-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-ugc-header-{{ ai_gen_id }}">
+    {% if block.settings.label != blank %}
+      <p class="ai-ugc-label-{{ ai_gen_id }}">{{ block.settings.label }}</p>
+    {% endif %}
+    {% if block.settings.title != blank %}
+      <h2 class="ai-ugc-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+    {% endif %}
+    {% if block.settings.subtitle != blank %}
+      <p class="ai-ugc-sub-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+    {% endif %}
+  </div>
+
+  <div class="ai-ugc-wrapper-{{ ai_gen_id }}">
+    <button class="ai-ugc-arrow-{{ ai_gen_id }} ai-ugc-prev-{{ ai_gen_id }}" aria-label="Previous videos">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+      </svg>
+    </button>
+
+    <div class="ai-ugc-track-{{ ai_gen_id }}">
+      {% for i in (1..5) %}
+        {% liquid
+          assign video_key = 'video_' | append: i
+          assign thumbnail_key = 'thumbnail_' | append: i
+          assign video = block.settings[video_key]
+          assign thumbnail = block.settings[thumbnail_key]
+        %}
+
+        <div class="ai-ugc-card-{{ ai_gen_id }}" data-card-index="{{ i }}">
+          {% if thumbnail %}
+            <img
+              class="ai-ugc-thumb-{{ ai_gen_id }}"
+              src="{{ thumbnail | image_url: width: 400 }}"
+              alt="{{ thumbnail.alt | escape }}"
+              loading="lazy"
+              width="400"
+              height="711"
+            >
+          {% endif %}
+
+          {% if video %}
+            <video class="ai-ugc-video-{{ ai_gen_id }}" loop playsinline preload="metadata">
+              <source src="{{ video }}" type="video/mp4">
+            </video>
+          {% endif %}
+
+          <div class="ai-ugc-play-btn-{{ ai_gen_id }}">
+            <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+
+          <div class="ai-ugc-pause-btn-{{ ai_gen_id }}">
+            <svg viewBox="0 0 24 24" fill="white" width="32" height="32">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <button class="ai-ugc-arrow-{{ ai_gen_id }} ai-ugc-next-{{ ai_gen_id }}" aria-label="Next videos">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+      </svg>
+    </button>
+  </div>
+</ugc-carousel-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class UgcCarousel{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentlyPlaying = null;
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.ai-ugc-track-{{ ai_gen_id }}');
+        this.cards = this.querySelectorAll('.ai-ugc-card-{{ ai_gen_id }}');
+        this.prevBtn = this.querySelector('.ai-ugc-prev-{{ ai_gen_id }}');
+        this.nextBtn = this.querySelector('.ai-ugc-next-{{ ai_gen_id }}');
+
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.cards.forEach((card) => {
+          card.addEventListener('click', () => this.togglePlay(card));
+        });
+
+        if (this.prevBtn) {
+          this.prevBtn.addEventListener('click', () => this.scroll(-1));
+        }
+
+        if (this.nextBtn) {
+          this.nextBtn.addEventListener('click', () => this.scroll(1));
+        }
+      }
+
+      togglePlay(card) {
+        const video = card.querySelector('.ai-ugc-video-{{ ai_gen_id }}');
+        const thumbnail = card.querySelector('.ai-ugc-thumb-{{ ai_gen_id }}');
+
+        if (!video) return;
+
+        if (this.currentlyPlaying && this.currentlyPlaying !== card) {
+          this.pauseCard(this.currentlyPlaying);
+        }
+
+        if (video.paused) {
+          video.play();
+          card.classList.add('playing');
+          if (thumbnail) {
+            thumbnail.classList.add('hidden');
+          }
+          this.currentlyPlaying = card;
+        } else {
+          this.pauseCard(card);
+        }
+      }
+
+      pauseCard(card) {
+        const video = card.querySelector('.ai-ugc-video-{{ ai_gen_id }}');
+        const thumbnail = card.querySelector('.ai-ugc-thumb-{{ ai_gen_id }}');
+
+        if (video) {
+          video.pause();
+          card.classList.remove('playing');
+          if (thumbnail) {
+            thumbnail.classList.remove('hidden');
+          }
+        }
+
+        if (this.currentlyPlaying === card) {
+          this.currentlyPlaying = null;
+        }
+      }
+
+      scroll(direction) {
+        const cardWidth = this.cards[0].offsetWidth;
+        const gap = {{ block.settings.card_gap }};
+        const scrollAmount = (cardWidth + gap) * direction;
+
+        this.track.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    customElements.define('ugc-carousel-{{ ai_gen_id }}', UgcCarousel{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "UGC video carousel",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Sans filtre — vrais résultats"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Ils ont testé. Voici leur vérité."
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Des clients qui voulaient juste se sentir normaux"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Videos"
+    },
+    {
+      "type": "url",
+      "id": "video_1",
+      "label": "Video 1 URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumbnail_1",
+      "label": "Video 1 thumbnail"
+    },
+    {
+      "type": "url",
+      "id": "video_2",
+      "label": "Video 2 URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumbnail_2",
+      "label": "Video 2 thumbnail"
+    },
+    {
+      "type": "url",
+      "id": "video_3",
+      "label": "Video 3 URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumbnail_3",
+      "label": "Video 3 thumbnail"
+    },
+    {
+      "type": "url",
+      "id": "video_4",
+      "label": "Video 4 URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumbnail_4",
+      "label": "Video 4 thumbnail"
+    },
+    {
+      "type": "url",
+      "id": "video_5",
+      "label": "Video 5 URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "thumbnail_5",
+      "label": "Video 5 thumbnail"
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "label": "Card width",
+      "min": 150,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap between cards",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card border radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label",
+      "default": "#999999"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle",
+      "default": "#aaaaaa"
+    },
+    {
+      "type": "color",
+      "id": "arrow_background",
+      "label": "Arrow background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow icon",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "arrow_hover_background",
+      "label": "Arrow hover background",
+      "default": "#f5f5f5"
+    }
+  ],
+  "presets": [
+    {
+      "name": "UGC video carousel"
+    }
+  ]
+}
 {% endschema %}
