@@ -1,0 +1,202 @@
+<section style="
+  padding: 70px 20px 60px;
+  background: {{ section.settings.bg_color }};
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+
+  <div style="text-align:center;max-width:1300px;margin:0 auto 40px;">
+    {% if section.settings.title != blank %}
+      <h2 style="font-size:32px;font-weight:700;color:#111;margin:0 0 14px;letter-spacing:-0.5px;">
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
+
+    <div style="display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;font-size:14px;">
+      <span style="font-weight:600;color:#111;">{{ section.settings.trustpilot_label }}</span>
+      <span style="display:inline-flex;gap:2px;">
+        {% for i in (1..5) %}
+          <span style="background:#00b67a;color:#fff;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">★</span>
+        {% endfor %}
+      </span>
+      <span style="color:#555;">{{ section.settings.trust_text }}</span>
+    </div>
+  </div>
+
+  <div style="position:relative;max-width:1400px;margin:0 auto;">
+
+    <div id="reviews-{{ section.id }}" style="
+      display:flex;gap:18px;overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      padding:10px 20px 30px;">
+
+      {% for block in section.blocks %}
+        <div style="
+          flex:0 0 360px;scroll-snap-align:start;
+          background:#fff;border:1px solid #eee;border-radius:14px;
+          overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,0.05);
+          display:flex;flex-direction:column;">
+
+          <div style="position:relative;display:grid;grid-template-columns:1fr 1fr;background:#000;aspect-ratio:16/10;">
+            {% if block.settings.image_before != blank %}
+              <img src="{{ block.settings.image_before | image_url: width: 600 }}"
+                   width="{{ block.settings.image_before.width }}"
+                   height="{{ block.settings.image_before.height }}"
+                   loading="lazy" alt=""
+                   style="width:100%;height:100%;object-fit:cover;display:block;">
+            {% endif %}
+            {% if block.settings.image_after != blank %}
+              <img src="{{ block.settings.image_after | image_url: width: 600 }}"
+                   width="{{ block.settings.image_after.width }}"
+                   height="{{ block.settings.image_after.height }}"
+                   loading="lazy" alt=""
+                   style="width:100%;height:100%;object-fit:cover;display:block;">
+            {% endif %}
+
+            {% if block.settings.tag_text != blank %}
+              <div style="
+                position:absolute;top:12px;right:12px;
+                background:rgba(0,0,0,0.75);color:#fff;
+                padding:6px 12px;border-radius:30px;font-size:12px;font-weight:500;
+                display:flex;align-items:center;gap:6px;">
+                <span style="width:10px;height:10px;border-radius:50%;background:{{ block.settings.tag_color }};display:inline-block;"></span>
+                {{ block.settings.tag_text }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div style="padding:18px 20px 22px;">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <span style="display:inline-flex;gap:1px;">
+                {% for i in (1..5) %}
+                  <span style="background:#00b67a;color:#fff;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">★</span>
+                {% endfor %}
+              </span>
+              <span style="color:#888;font-size:13px;font-style:italic;">{{ block.settings.date }}</span>
+            </div>
+
+            <h3 style="font-size:15px;font-weight:700;color:#111;margin:0 0 10px;">
+              {{ block.settings.review_title }}
+            </h3>
+
+            <p style="font-size:14px;line-height:1.55;color:#444;margin:0 0 16px;">
+              "{{ block.settings.review_text }}"
+            </p>
+
+            <p style="font-size:14px;font-weight:600;color:#111;margin:0;">
+              {{ block.settings.author }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+  <style>
+    #reviews-{{ section.id }}::-webkit-scrollbar { display: none; }
+    @media (max-width: 768px) {
+      #reviews-{{ section.id }} > div { flex: 0 0 85%; }
+    }
+  </style>
+
+</section>
+
+{% schema %}
+{
+  "name": "Avis Clients",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre principal",
+      "default": "Don't take our word for it"
+    },
+    {
+      "type": "text",
+      "id": "trustpilot_label",
+      "label": "Label (avant les étoiles)",
+      "default": "Excellent"
+    },
+    {
+      "type": "text",
+      "id": "trust_text",
+      "label": "Texte de confiance",
+      "default": "Trusted by 40,000+ Men"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur de fond",
+      "default": "#fafafa"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Avis client",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_before",
+          "label": "Photo AVANT"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_after",
+          "label": "Photo APRÈS"
+        },
+        {
+          "type": "text",
+          "id": "tag_text",
+          "label": "Étiquette (ex: Black, Medium Brown)",
+          "default": "Black"
+        },
+        {
+          "type": "color",
+          "id": "tag_color",
+          "label": "Couleur du point d'étiquette",
+          "default": "#000000"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "default": "09/02/2026"
+        },
+        {
+          "type": "text",
+          "id": "review_title",
+          "label": "Titre de l'avis",
+          "default": "The best gift for a man with thin hair"
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Texte de l'avis",
+          "default": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Nom + Ville",
+          "default": "James T. New York"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Avis Clients",
+      "blocks": [
+        { "type": "review" },
+        { "type": "review" },
+        { "type": "review" },
+        { "type": "review" }
+      ]
+    }
+  ]
+}
+{% endschema %}
