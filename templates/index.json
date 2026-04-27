@@ -32,6 +32,7 @@
         "logo_gCHQiD": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/GQ_Magazine_on_X.jpg",
             "logo_width": 120,
             "link": ""
           }
@@ -39,14 +40,16 @@
         "logo_xDKVDz": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
+            "logo": "shopify://shop_images/About_SciePro__20_Years_of_3D_Medical_Visualization.jpg",
+            "logo_width": 280,
             "link": ""
           }
         },
         "logo_mydgXb": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
+            "logo": "shopify://shop_images/telechargement_2.jpg",
+            "logo_width": 280,
             "link": ""
           }
         },
@@ -67,7 +70,7 @@
       "name": "Logo list",
       "settings": {
         "full_width": true,
-        "stack_mobile": true,
+        "stack_mobile": false,
         "title": "Vu dans",
         "content": "",
         "text_alignment": "start",
@@ -87,31 +90,12 @@
         "image_rcttrQ": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Copie_de_Template_Section_benefice.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide 1",
-            "heading_tag": "h0",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
-            "background": "",
-            "background_gradient": ""
-          }
-        },
-        "image_J9REyN": {
-          "type": "image",
-          "settings": {
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "Tell your story",
-            "title": "Slide 2",
+            "subheading": "",
+            "title": "",
             "heading_tag": "h0",
             "button_text": "",
             "button_link": "",
@@ -126,8 +110,7 @@
         }
       },
       "block_order": [
-        "image_rcttrQ",
-        "image_J9REyN"
+        "image_rcttrQ"
       ],
       "name": "Slideshow",
       "settings": {
