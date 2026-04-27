@@ -167,6 +167,41 @@
         "text_color": ""
       }
     },
+    "17773181760aee5224": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_1350b90_BdY6iV": {
+          "type": "ai_gen_block_1350b90",
+          "settings": {
+            "label": "Sans filtre — vrais résultats",
+            "title": "Ils ont testé. Voici leur vérité.",
+            "subtitle": "Des clients qui voulaient juste se sentir normaux",
+            "title_size": 26,
+            "subtitle_size": 14,
+            "video_1": "",
+            "video_2": "",
+            "video_3": "",
+            "video_4": "",
+            "video_5": "",
+            "card_width": 200,
+            "card_gap": 12,
+            "card_border_radius": 18,
+            "background_color": "#ffffff",
+            "label_color": "#999999",
+            "title_color": "#111111",
+            "subtitle_color": "#aaaaaa",
+            "arrow_background": "#ffffff",
+            "arrow_color": "#111111",
+            "arrow_hover_background": "#f5f5f5"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_1350b90_BdY6iV"
+      ],
+      "settings": {}
+    },
     "rich_text_ExBwKz": {
       "type": "rich-text",
       "blocks": {
@@ -594,6 +629,7 @@
     "logo_list_CqqKF4",
     "slideshow_CPm9eP",
     "rich_text_NFBg3z",
+    "17773181760aee5224",
     "rich_text_ExBwKz",
     "logo_list_rGn9wp",
     "testimonials_94J7AV",
