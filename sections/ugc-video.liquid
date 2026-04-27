@@ -25,21 +25,21 @@
 
   <div style="position:relative;max-width:1300px;margin:0 auto;">
 
-    <button onclick="hairoScroll_{{ section.id }}(-1)" class="hairo-arrow-{{ section.id }}" style="
+    <button onclick="hairoScroll_{{ section.id }}(-1)" style="
       position:absolute;left:10px;top:50%;transform:translateY(-50%);z-index:10;
       background:#fff;border:1px solid #e5e5e5;border-radius:50%;
       width:44px;height:44px;font-size:20px;cursor:pointer;
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
       display:flex;align-items:center;justify-content:center;">‹</button>
 
-    <button onclick="hairoScroll_{{ section.id }}(1)" class="hairo-arrow-{{ section.id }}" style="
+    <button onclick="hairoScroll_{{ section.id }}(1)" style="
       position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:10;
       background:#fff;border:1px solid #e5e5e5;border-radius:50%;
       width:44px;height:44px;font-size:20px;cursor:pointer;
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
       display:flex;align-items:center;justify-content:center;">›</button>
 
-    <div id="hairo-carousel-{{ section.id }}" class="hairo-carousel" style="
+    <div id="hairo-carousel-{{ section.id }}" style="
       display:flex;gap:14px;overflow-x:auto;
       scroll-snap-type:x mandatory;
       -webkit-overflow-scrolling:touch;
@@ -47,39 +47,21 @@
       padding:10px 60px 20px;">
 
       {% for block in section.blocks %}
-        <div class="hairo-card" onclick="hairoPlay(this)" style="
+        <div style="
           flex:0 0 240px;scroll-snap-align:start;
           border-radius:18px;overflow:hidden;position:relative;
-          cursor:pointer;background:#000;aspect-ratio:9/16;
-          box-shadow:0 6px 20px rgba(0,0,0,0.1);" {{ block.shopify_attributes }}>
+          background:#000;aspect-ratio:9/16;
+          box-shadow:0 6px 20px rgba(0,0,0,0.12);">
 
-          {% if block.settings.thumbnail %}
-            <img src="{{ block.settings.thumbnail | image_url: width: 600 }}"
-     width="{{ block.settings.thumbnail.width }}"
-     height="{{ block.settings.thumbnail.height }}"
-     loading="lazy"
-     alt=""
-     style="width:100%;height:100%;object-fit:cover;display:block;">
-          {% else %}
-            <div style="width:100%;height:100%;background:#222;"></div>
-          {% endif %}
-
-          {% if block.settings.video %}
-            <video style="display:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" loop playsinline>
-              <source src="{{ block.settings.video.sources[1].url }}" type="video/mp4">
+          {% if block.settings.video != blank %}
+            <video
+              src="{{ block.settings.video.sources[1].url | default: block.settings.video.sources[0].url }}"
+              autoplay muted loop playsinline
+              {% if block.settings.thumbnail != blank %}poster="{{ block.settings.thumbnail | image_url: width: 600 }}"{% endif %}
+              style="width:100%;height:100%;object-fit:cover;display:block;">
             </video>
           {% endif %}
 
-          <div class="hairo-play" style="
-            position:absolute;inset:0;display:flex;
-            align-items:center;justify-content:center;
-            background:rgba(0,0,0,0.15);">
-            <div style="
-              width:56px;height:56px;background:rgba(255,255,255,0.95);
-              border-radius:50%;display:flex;align-items:center;
-              justify-content:center;font-size:18px;color:#000;
-              padding-left:4px;">▶</div>
-          </div>
         </div>
       {% endfor %}
 
@@ -87,48 +69,16 @@
   </div>
 
   <style>
-    #hairo-carousel-{{ section.id }}::-webkit-scrollbar { display:none; }
-    @media (max-width:768px) {
-      .hairo-arrow-{{ section.id }} { display:none !important; }
-      #hairo-carousel-{{ section.id }} .hairo-card { flex:0 0 75% !important; }
+    #hairo-carousel-{{ section.id }}::-webkit-scrollbar { display: none; }
+    @media (max-width: 768px) {
+      #hairo-carousel-{{ section.id }} { padding: 10px 20px 20px; }
+      #hairo-carousel-{{ section.id }} > div { flex: 0 0 75%; }
     }
   </style>
 
 </section>
 
 <script>
-  function hairoPlay(card) {
-    const img = card.querySelector('img');
-    const video = card.querySelector('video');
-    const btn = card.querySelector('.hairo-play');
-    if (!video) return;
-
-    document.querySelectorAll('.hairo-card').forEach(c => {
-      if (c !== card) {
-        const v = c.querySelector('video');
-        if (v) {
-          v.pause();
-          v.style.display = 'none';
-          const i = c.querySelector('img');
-          if (i) i.style.display = 'block';
-          c.querySelector('.hairo-play').style.display = 'flex';
-        }
-      }
-    });
-
-    if (!video.paused) {
-      video.pause();
-      video.style.display = 'none';
-      if (img) img.style.display = 'block';
-      btn.style.display = 'flex';
-    } else {
-      if (img) img.style.display = 'none';
-      btn.style.display = 'none';
-      video.style.display = 'block';
-      video.play();
-    }
-  }
-
   function hairoScroll_{{ section.id }}(dir) {
     document.getElementById('hairo-carousel-{{ section.id }}').scrollBy({
       left: dir * 260, behavior: 'smooth'
@@ -140,46 +90,18 @@
 {
   "name": "UGC Vidéos",
   "settings": [
-    {
-      "type": "text",
-      "id": "suptitle",
-      "label": "Sur-titre",
-      "default": "No filter — real results"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Titre principal",
-      "default": "Real users, real transformations"
-    },
-    {
-      "type": "text",
-      "id": "subtitle",
-      "label": "Sous-titre",
-      "default": "Trusted by users who just want to feel normal again"
-    },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Couleur de fond",
-      "default": "#ffffff"
-    }
+    { "type": "text", "id": "suptitle", "label": "Sur-titre", "default": "No filter — real results" },
+    { "type": "text", "id": "title", "label": "Titre principal", "default": "Real users, real transformations" },
+    { "type": "text", "id": "subtitle", "label": "Sous-titre", "default": "Trusted by users who just want to feel normal again" },
+    { "type": "color", "id": "bg_color", "label": "Couleur de fond", "default": "#ffffff" }
   ],
   "blocks": [
     {
       "type": "video",
       "name": "Vidéo UGC",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "thumbnail",
-          "label": "Miniature (image cover)"
-        },
-        {
-          "type": "video",
-          "id": "video",
-          "label": "Vidéo MP4"
-        }
+        { "type": "image_picker", "id": "thumbnail", "label": "Miniature (image de chargement)" },
+        { "type": "video", "id": "video", "label": "Vidéo MP4" }
       ]
     }
   ],
@@ -188,10 +110,7 @@
     {
       "name": "UGC Vidéos",
       "blocks": [
-        { "type": "video" },
-        { "type": "video" },
-        { "type": "video" },
-        { "type": "video" }
+        { "type": "video" }, { "type": "video" }, { "type": "video" }, { "type": "video" }
       ]
     }
   ]
