@@ -167,6 +167,51 @@
         "text_color": ""
       }
     },
+    "ugc_video_pCGiH3": {
+      "type": "ugc-video",
+      "blocks": {
+        "video_LrYFwT": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/0c3403fe49944c65ad4ce79ee6ff9580.HD-1080p-2.5Mbps-80538478.mp4"
+          }
+        },
+        "video_agQCaU": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/e300ea374de34a72a73877dc3823f136.HD-1080p-2.5Mbps-80538481.mp4"
+          }
+        },
+        "video_8Nd3kC": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/ea1a63cc90dc46dab20703597a4ec331.HD-1080p-2.5Mbps-80538479.mp4"
+          }
+        },
+        "video_JgRM7W": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_Ee9Frq": {
+          "type": "video",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "video_LrYFwT",
+        "video_agQCaU",
+        "video_8Nd3kC",
+        "video_JgRM7W",
+        "video_Ee9Frq"
+      ],
+      "name": "UGC Vidéos",
+      "settings": {
+        "suptitle": "No filter — real results",
+        "title": "Real users, real transformations",
+        "subtitle": "Trusted by users who just want to feel normal again",
+        "bg_color": "#ffffff"
+      }
+    },
     "rich_text_ExBwKz": {
       "type": "rich-text",
       "blocks": {
@@ -607,6 +652,7 @@
     "logo_list_CqqKF4",
     "slideshow_CPm9eP",
     "rich_text_NFBg3z",
+    "ugc_video_pCGiH3",
     "rich_text_ExBwKz",
     "custom_html_BNticx",
     "logo_list_rGn9wp",
