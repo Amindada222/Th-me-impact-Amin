@@ -372,6 +372,68 @@
         "testimonial_card_text_color": ""
       }
     },
+    "avis_clients_iHVNwR": {
+      "type": "avis-clients",
+      "blocks": {
+        "review_TJgddX": {
+          "type": "review",
+          "settings": {
+            "tag_text": "Black",
+            "tag_color": "#000000",
+            "date": "09/02/2026",
+            "review_title": "The best gift for a man with thin hair",
+            "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
+            "author": "James T. New York"
+          }
+        },
+        "review_bGWf8m": {
+          "type": "review",
+          "settings": {
+            "tag_text": "Black",
+            "tag_color": "#000000",
+            "date": "09/02/2026",
+            "review_title": "The best gift for a man with thin hair",
+            "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
+            "author": "James T. New York"
+          }
+        },
+        "review_GhbFc7": {
+          "type": "review",
+          "settings": {
+            "tag_text": "Black",
+            "tag_color": "#000000",
+            "date": "09/02/2026",
+            "review_title": "The best gift for a man with thin hair",
+            "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
+            "author": "James T. New York"
+          }
+        },
+        "review_dKzraQ": {
+          "type": "review",
+          "settings": {
+            "tag_text": "Black",
+            "tag_color": "#000000",
+            "date": "09/02/2026",
+            "review_title": "The best gift for a man with thin hair",
+            "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
+            "author": "James T. New York"
+          }
+        }
+      },
+      "block_order": [
+        "review_TJgddX",
+        "review_bGWf8m",
+        "review_GhbFc7",
+        "review_dKzraQ"
+      ],
+      "name": "Avis Clients",
+      "settings": {
+        "title": "Don't take our word for it",
+        "trustpilot_label": "Excellent",
+        "trust_text": "Trusted by 40,000+ Men",
+        "bg_color": "#fafafa"
+      }
+    },
     "17773204559783ab64": {
       "type": "_blocks",
       "settings": {}
@@ -644,6 +706,7 @@
     "rich_text_ExBwKz",
     "logo_list_rGn9wp",
     "testimonials_94J7AV",
+    "avis_clients_iHVNwR",
     "17773204559783ab64",
     "image_with_text_overlay_wJeTfa",
     "featured_product_a9DCfx",
