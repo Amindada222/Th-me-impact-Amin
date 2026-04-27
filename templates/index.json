@@ -249,137 +249,13 @@
         "text_color": ""
       }
     },
-    "logo_list_rGn9wp": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_7UPhQV": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_yq37YN": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_kpQMAa": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_bbfz99": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_9BaBtE": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo_7UPhQV",
-        "logo_yq37YN",
-        "logo_kpQMAa",
-        "logo_bbfz99",
-        "logo_9BaBtE"
-      ],
-      "name": "Logo list",
-      "settings": {
-        "full_width": true,
-        "stack_mobile": true,
-        "title": "Logo list",
-        "content": "",
-        "text_alignment": "start",
-        "items_per_row": 5,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "",
-        "logo_item_border": ""
-      }
-    },
-    "testimonials_94J7AV": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_8g49AD": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 4,
-            "author": "John S.",
-            "title": "Testimonial 1",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
-          }
-        },
-        "testimonial_ngWnMh": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Mary U.",
-            "title": "Testimonial 2",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
-          }
-        },
-        "testimonial_E8fzhB": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 4,
-            "author": "Joshua A.",
-            "title": "Testimonial 3",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_8g49AD",
-        "testimonial_ngWnMh",
-        "testimonial_E8fzhB"
-      ],
-      "name": "Testimonials",
-      "settings": {
-        "full_width": true,
-        "stack_testimonials": true,
-        "subheading": "",
-        "title": "Testimonials",
-        "content": "",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "testimonial_card_background": "",
-        "testimonial_card_text_color": ""
-      }
-    },
     "avis_clients_iHVNwR": {
       "type": "avis-clients",
       "blocks": {
         "review_7yAG9t": {
           "type": "review",
           "settings": {
-            "tag_text": "Black",
-            "tag_color": "#000000",
+            "image": "shopify://shop_images/Design_sans_titre_18.png",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -389,8 +265,6 @@
         "review_8rnjVm": {
           "type": "review",
           "settings": {
-            "tag_text": "Black",
-            "tag_color": "#000000",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -400,8 +274,6 @@
         "review_TJgddX": {
           "type": "review",
           "settings": {
-            "tag_text": "Black",
-            "tag_color": "#000000",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -411,8 +283,6 @@
         "review_bGWf8m": {
           "type": "review",
           "settings": {
-            "tag_text": "Black",
-            "tag_color": "#000000",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -422,8 +292,6 @@
         "review_GhbFc7": {
           "type": "review",
           "settings": {
-            "tag_text": "Black",
-            "tag_color": "#000000",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -433,8 +301,6 @@
         "review_dKzraQ": {
           "type": "review",
           "settings": {
-            "tag_text": "Black",
-            "tag_color": "#000000",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -728,8 +594,6 @@
     "rich_text_NFBg3z",
     "ugc_video_pCGiH3",
     "rich_text_ExBwKz",
-    "logo_list_rGn9wp",
-    "testimonials_94J7AV",
     "avis_clients_iHVNwR",
     "17773204559783ab64",
     "image_with_text_overlay_wJeTfa",
