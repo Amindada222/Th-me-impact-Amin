@@ -40,7 +40,7 @@
         "logo_xDKVDz": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/About_SciePro__20_Years_of_3D_Medical_Visualization.jpg",
+            "logo": "shopify://shop_images/Design_sans_titre_21.png",
             "logo_width": 280,
             "link": ""
           }
@@ -48,15 +48,8 @@
         "logo_mydgXb": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/telechargement_2.jpg",
+            "logo": "shopify://shop_images/Design_sans_titre_19.png",
             "logo_width": 280,
-            "link": ""
-          }
-        },
-        "logo_atJPhx": {
-          "type": "logo",
-          "settings": {
-            "logo_width": 120,
             "link": ""
           }
         }
@@ -64,8 +57,7 @@
       "block_order": [
         "logo_gCHQiD",
         "logo_xDKVDz",
-        "logo_mydgXb",
-        "logo_atJPhx"
+        "logo_mydgXb"
       ],
       "name": "Logo list",
       "settings": {
