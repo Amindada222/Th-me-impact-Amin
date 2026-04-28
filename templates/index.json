@@ -155,9 +155,9 @@
       ],
       "name": "UGC Vidéos",
       "settings": {
-        "suptitle": "No filter — real results",
-        "title": "Real users, real transformations",
-        "subtitle": "Trusted by users who just want to feel normal again",
+        "suptitle": "",
+        "title": "",
+        "subtitle": "",
         "bg_color": "#ffffff"
       }
     },
