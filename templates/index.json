@@ -174,16 +174,6 @@
             "author": "James T. New York"
           }
         },
-        "review_TJgddX": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/image-1777400696583.jpg",
-            "date": "09/02/2026",
-            "review_title": "The best gift for a man with thin hair",
-            "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
-            "author": "James T. New York"
-          }
-        },
         "review_bGWf8m": {
           "type": "review",
           "settings": {
@@ -223,22 +213,32 @@
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
             "author": "James T. New York"
           }
+        },
+        "review_TJgddX": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/image-1777400696583.jpg",
+            "date": "09/02/2026",
+            "review_title": "The best gift for a man with thin hair",
+            "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
+            "author": "James T. New York"
+          }
         }
       },
       "block_order": [
         "review_8rnjVm",
-        "review_TJgddX",
         "review_bGWf8m",
         "review_GhbFc7",
         "review_dKzraQ",
-        "review_UJky6J"
+        "review_UJky6J",
+        "review_TJgddX"
       ],
       "name": "Avis Clients",
       "settings": {
-        "title": "Don't take our word for it",
+        "title": "Témoignages clients",
         "trustpilot_label": "Excellent",
         "trust_text": "Trusted by + Men",
-        "bg_color": "#b8a060"
+        "bg_color": "#f0f0f0"
       }
     },
     "17773204559783ab64": {
