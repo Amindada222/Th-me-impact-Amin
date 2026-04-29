@@ -122,6 +122,12 @@
     "ugc_video_pCGiH3": {
       "type": "ugc-video",
       "blocks": {
+        "video_8Nd3kC": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/ea1a63cc90dc46dab20703597a4ec331.HD-1080p-2.5Mbps-80538479.mp4"
+          }
+        },
         "video_LrYFwT": {
           "type": "video",
           "settings": {
@@ -134,12 +140,6 @@
             "video": "shopify://files/videos/e300ea374de34a72a73877dc3823f136.HD-1080p-2.5Mbps-80538481.mp4"
           }
         },
-        "video_8Nd3kC": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/ea1a63cc90dc46dab20703597a4ec331.HD-1080p-2.5Mbps-80538479.mp4"
-          }
-        },
         "video_JgRM7W": {
           "type": "video",
           "settings": {
@@ -148,9 +148,9 @@
         }
       },
       "block_order": [
+        "video_8Nd3kC",
         "video_LrYFwT",
         "video_agQCaU",
-        "video_8Nd3kC",
         "video_JgRM7W"
       ],
       "name": "UGC Vidéos",
