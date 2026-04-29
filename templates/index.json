@@ -187,6 +187,7 @@
         "review_TJgddX": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/image-1777400696583.jpg",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -196,6 +197,7 @@
         "review_bGWf8m": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Capture_d_ecran_2026-04-29_213012.png",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -205,6 +207,7 @@
         "review_GhbFc7": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Capture_d_ecran_2026-04-29_212951.png",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -214,6 +217,7 @@
         "review_dKzraQ": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Capture_d_ecran_2026-04-29_212718.png",
             "date": "09/02/2026",
             "review_title": "The best gift for a man with thin hair",
             "review_text": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural.",
@@ -240,47 +244,6 @@
     "17773204559783ab64": {
       "type": "_blocks",
       "settings": {}
-    },
-    "image_with_text_overlay_wJeTfa": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "subheading_y9F3ke": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          }
-        },
-        "heading_NQNkW6": {
-          "type": "heading",
-          "settings": {
-            "text": "Image with text overlay",
-            "heading_tag": "h1"
-          }
-        },
-        "richtext_PCEx9e": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_y9F3ke",
-        "heading_NQNkW6",
-        "richtext_PCEx9e"
-      ],
-      "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "auto",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#ffffff",
-        "overlay_color": "#000000",
-        "overlay_opacity": 30
-      }
     },
     "featured_product_a9DCfx": {
       "type": "featured-product",
@@ -371,59 +334,19 @@
       "settings": {
         "full_width": true,
         "product": "kravyn",
-        "desktop_media_width": 55,
+        "desktop_media_width": 40,
         "desktop_media_layout": "carousel_thumbnails_left",
-        "mobile_media_size": "expanded",
-        "mobile_carousel_control": "floating_dots",
+        "mobile_media_size": "contained",
+        "mobile_carousel_control": "free_scroll",
         "enable_video_autoplay": true,
         "enable_video_looping": false,
         "enable_image_zoom": true,
-        "max_image_zoom_level": 3,
+        "max_image_zoom_level": 2,
         "background": "",
         "background_gradient": "",
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
-      }
-    },
-    "images_with_text_scrolling_TwdjDr": {
-      "type": "images-with-text-scrolling",
-      "blocks": {
-        "item_8NJ9xn": {
-          "type": "item",
-          "settings": {
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading 1",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "item_YTJnpK": {
-          "type": "item",
-          "settings": {
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading 2",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_8NJ9xn",
-        "item_YTJnpK"
-      ],
-      "name": "Images and text scrolling",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "show_counter": true,
-        "desktop_image_effect": "reveal",
-        "image_position": "end",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "faq": {
@@ -507,9 +430,7 @@
     "ugc_video_pCGiH3",
     "avis_clients_iHVNwR",
     "17773204559783ab64",
-    "image_with_text_overlay_wJeTfa",
     "featured_product_a9DCfx",
-    "images_with_text_scrolling_TwdjDr",
     "faq",
     "contact_fzwWbE"
   ]
