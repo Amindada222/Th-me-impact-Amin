@@ -182,11 +182,11 @@
             "default_tab": "automatic",
             "only_photos": false,
             "hide_thumbnails": true,
-            "product_handle": "",
+            "product_handle": "kravyn",
             "aggregated": false,
             "data-limit": 20,
             "maxwidth": 1080,
-            "is_sample": true
+            "is_sample": false
           }
         }
       },
