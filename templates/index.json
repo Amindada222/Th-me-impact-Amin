@@ -221,58 +221,11 @@
     "featured_product_a9DCfx": {
       "type": "featured-product",
       "blocks": {
-        "vendor_Ef8Y4t": {
-          "type": "vendor",
-          "settings": {}
-        },
-        "title_nN9bQd": {
-          "type": "title",
+        "rapi_rapi_bundle_gxj4H8": {
+          "type": "shopify://apps/rapi/blocks/rapi-bundle/99617c17-a32b-4e70-a883-7a155610d032",
           "settings": {
-            "heading_tag": "h2"
+            "product": "{{section.settings.product}}"
           }
-        },
-        "badges_mc9BCP": {
-          "type": "badges",
-          "settings": {}
-        },
-        "price_pc8QqP": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "rating_nb4Xdp": {
-          "type": "rating",
-          "settings": {
-            "show_empty": false
-          }
-        },
-        "separator_ezczmE": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description_hqxck3": {
-          "type": "description",
-          "settings": {
-            "icon": "none",
-            "icon_width": 20,
-            "collapse_content": false
-          }
-        },
-        "variant_picker_jkgnAw": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_style": "block",
-            "swatch_selector_style": "swatch",
-            "variant_image_options": "",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector_rbkKkD": {
-          "type": "quantity_selector",
-          "settings": {}
         },
         "buy_buttons_WR7iAE": {
           "type": "buy_buttons",
@@ -284,24 +237,11 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
-        },
-        "pickup_availability_NMhfwz": {
-          "type": "pickup_availability",
-          "settings": {}
         }
       },
       "block_order": [
-        "vendor_Ef8Y4t",
-        "title_nN9bQd",
-        "badges_mc9BCP",
-        "price_pc8QqP",
-        "rating_nb4Xdp",
-        "separator_ezczmE",
-        "description_hqxck3",
-        "variant_picker_jkgnAw",
-        "quantity_selector_rbkKkD",
-        "buy_buttons_WR7iAE",
-        "pickup_availability_NMhfwz"
+        "rapi_rapi_bundle_gxj4H8",
+        "buy_buttons_WR7iAE"
       ],
       "name": "Featured product",
       "settings": {
