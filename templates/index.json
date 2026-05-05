@@ -345,12 +345,28 @@
             "title": "J'ai une calvitie avancée, ça marche quand même ?",
             "content": "<p><br/>Soyons honnêtes :<br/><br/>Si tu es rasé à zéro → Non, ça ne peut pas<br/>accrocher sans base capillaire.<br/><br/>Si tu as encore des cheveux sur la zone,<br/>même très clairsemés → Oui.<br/>La poudre s'accroche à ce qui existe<br/>et démultiplie visuellement la densité.<br/><br/>Résultat : des zones qui semblaient vides<br/>paraissent naturellement remplies.<br/><br/></p>"
           }
+        },
+        "item_RjiTnD": {
+          "type": "item",
+          "settings": {
+            "title": "C'est quoi les ingrédients ? C'est dangereux ?",
+            "content": "<p><br/>Formule 100% naturelle.<br/>Microfibres de coton.<br/>Aucun produit chimique agressif.<br/>Testé dermatologiquement.<br/><br/>Tu ne mets pas un médicament sur ta tête.<br/>Tu ajoutes de la densité.<br/>C'est aussi simple que ça.<br/><br/></p>"
+          }
+        },
+        "item_aFPUYD": {
+          "type": "item",
+          "settings": {
+            "title": "Et si ça ne me convient pas ?",
+            "content": "<p><br/>Tu as 30 jours.<br/>Tu testes dans ta vraie vie.<br/>Bureau, sport, soirée.<br/><br/>Si t'es pas convaincu :<br/>on te rembourse. Entièrement.<br/>Sans question. Sans formulaire compliqué.<br/><br/>On est confiant parce que le produit l'est.<br/><br/></p>"
+          }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
         "166442457738b23caf-1",
-        "166442457738b23caf-2"
+        "166442457738b23caf-2",
+        "item_RjiTnD",
+        "item_aFPUYD"
       ],
       "settings": {
         "full_width": false,
