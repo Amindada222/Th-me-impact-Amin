@@ -196,7 +196,7 @@
             "hide_thumbnails": false,
             "product_handle": "kravyn",
             "aggregated": true,
-            "data-limit": 4,
+            "data-limit": 10,
             "maxwidth": 1080,
             "is_sample": true
           }
