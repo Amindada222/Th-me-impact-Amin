@@ -11,6 +11,18 @@
   "sections": {
     "image_with_text_overlay_844NqF": {
       "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_rAGG74": {
+          "type": "heading",
+          "settings": {
+            "text": "Retrouve la densité de tes 25 ans.En 10 secondes. Sans que ça se voit.",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rAGG74"
+      ],
       "name": "Image with text overlay",
       "settings": {
         "full_width": true,
@@ -175,23 +187,23 @@
     "177767113360b87a69": {
       "type": "apps",
       "blocks": {
-        "loox_reviews_loox_agg_section_7nKyUP": {
+        "loox_reviews_loox_agg_section_RPtfFA": {
           "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "reviews_to_display": "",
             "default_tab": "automatic",
             "only_photos": false,
-            "hide_thumbnails": true,
+            "hide_thumbnails": false,
             "product_handle": "kravyn",
-            "aggregated": false,
+            "aggregated": true,
             "data-limit": 20,
             "maxwidth": 1080,
-            "is_sample": false
+            "is_sample": true
           }
         }
       },
       "block_order": [
-        "loox_reviews_loox_agg_section_7nKyUP"
+        "loox_reviews_loox_agg_section_RPtfFA"
       ],
       "settings": {
         "full_width": true,
