@@ -30,11 +30,20 @@
             "show_menu_title": true,
             "menu_title": ""
           }
+        },
+        "text_LrPe4t": {
+          "type": "text",
+          "settings": {
+            "title": "Contact",
+            "content": "<p>contact@kravyn.com</p><p>7/7 j de 8h00 à 20h30</p>",
+            "enable_follow_on_shop": true
+          }
         }
       },
       "block_order": [
         "newsletter",
-        "links"
+        "links",
+        "text_LrPe4t"
       ],
       "settings": {
         "show_social_media": true,
