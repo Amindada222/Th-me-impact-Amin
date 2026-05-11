@@ -131,6 +131,32 @@
         "background_gradient": ""
       }
     },
+    "rich_text_PACFVG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_rf7HQc": {
+          "type": "heading",
+          "settings": {
+            "text": "Résultat naturel. Invisible. Immédiat.Exactement ce que tu cherchais.",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_rf7HQc"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "ugc_video_pCGiH3": {
       "type": "ugc-video",
       "blocks": {
@@ -356,6 +382,7 @@
     "image_with_text_overlay_844NqF",
     "logo_list_CqqKF4",
     "slideshow_CPm9eP",
+    "rich_text_PACFVG",
     "ugc_video_pCGiH3",
     "177767112194c49f39",
     "177767113360b87a69",
