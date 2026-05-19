@@ -237,6 +237,64 @@
         "text_color": ""
       }
     },
+    "avis_clients_WPzrje": {
+      "type": "avis-clients",
+      "blocks": {
+        "review_M99YiV": {
+          "type": "review",
+          "settings": {
+            "customer_name": "Thomas M.",
+            "customer_location": "Paris, France",
+            "rating": 5,
+            "review_title": "Excellent produit !",
+            "review_text": "J'utilisais des sprays depuis 3 ans mais rien n'approchait ce résultat. En 10 secondes, ma zone clairsemée sur le dessus disparaît complètement. Ma coiffeuse m'a demandé si j'avais fait une greffe. Je recommande les yeux fermés.",
+            "review_date": "Il y a 3 jours",
+            "customer_photo": "shopify://shop_images/KB8JBJeMTz.webp",
+            "avatar_color": "#b8a060"
+          }
+        },
+        "review_hnjfHg": {
+          "type": "review",
+          "settings": {
+            "customer_name": "Hugo",
+            "customer_location": "Lyon, France",
+            "rating": 5,
+            "review_title": "Je recommande vivement",
+            "review_text": "À 34 ans, je commençais à éviter les photos. Depuis que je l'utilise chaque matin, je me sens à nouveau moi-même. Ma femme dit qu'elle voit une vraie différence dans mon humeur. Ça vaut bien plus que le prix.",
+            "review_date": "Il y a 1 semaine",
+            "avatar_color": "#7c3aed"
+          }
+        },
+        "review_6iHTLh": {
+          "type": "review",
+          "settings": {
+            "customer_name": "Marc D.",
+            "customer_location": "Marseille, France",
+            "rating": 4,
+            "review_title": "Très bon rapport qualité-prix",
+            "review_text": "Produit conforme aux attentes. Seul bémol : délai de livraison un peu long, mais la qualité est au rendez-vous.",
+            "review_date": "Il y a 2 semaines",
+            "avatar_color": "#00a341"
+          }
+        }
+      },
+      "block_order": [
+        "review_M99YiV",
+        "review_hnjfHg",
+        "review_6iHTLh"
+      ],
+      "name": "Avis clients",
+      "settings": {
+        "title": "Nos clients nous font confiance",
+        "overall_rating": 4.8,
+        "reviews_count": "127 avis vérifiés",
+        "section_background": "#ffffff",
+        "card_background": "#f9f9f9",
+        "button_color": "#1a1a1a",
+        "button_text": "Voir tous les avis",
+        "button_link": ""
+      }
+    },
     "177767113360b87a69": {
       "type": "apps",
       "settings": {
@@ -393,6 +451,7 @@
     "rich_text_PACFVG",
     "ugc_video_pCGiH3",
     "177767112194c49f39",
+    "avis_clients_WPzrje",
     "177767113360b87a69",
     "17773204559783ab64",
     "featured_product_a9DCfx",
