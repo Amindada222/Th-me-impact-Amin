@@ -16,14 +16,14 @@
           "type": "heading",
           "settings": {
             "text": "Reconnais-toi dans le miroir.",
-            "heading_tag": "h1"
+            "heading_tag": "h3"
           }
         },
         "heading_rAGG74": {
           "type": "heading",
           "settings": {
-            "text": "Kravyn densifie tes cheveux existants.             Résultat immédiat, naturel, invisible.",
-            "heading_tag": "h3"
+            "text": "Kravyn densifie tes cheveux existants.             Résultat immédiat,          naturel, invisible.",
+            "heading_tag": "h6"
           }
         }
       },
