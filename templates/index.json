@@ -12,15 +12,23 @@
     "image_with_text_overlay_844NqF": {
       "type": "image-with-text-overlay",
       "blocks": {
+        "heading_ewTzwm": {
+          "type": "heading",
+          "settings": {
+            "text": "Reconnais-toi dans le miroir.",
+            "heading_tag": "h1"
+          }
+        },
         "heading_rAGG74": {
           "type": "heading",
           "settings": {
-            "text": "Retrouve la densité capillaire en 10 secondes. Sans que ça se voit.",
+            "text": "Kravyn densifie tes cheveux existants.             Résultat immédiat, naturel, invisible.",
             "heading_tag": "h3"
           }
         }
       },
       "block_order": [
+        "heading_ewTzwm",
         "heading_rAGG74"
       ],
       "name": "Image with text overlay",
