@@ -1,175 +1,408 @@
-<section style="
-  padding: 70px 20px 60px;
-  background: {{ section.settings.bg_color }};
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+{% comment %} sections/avis-clients.liquid {% endcomment %}
 
-  <div style="text-align:center;max-width:1300px;margin:0 auto 40px;">
-    {% if section.settings.title != blank %}
-      <h2 style="font-size:32px;font-weight:700;color:#111;margin:0 0 14px;letter-spacing:-0.5px;">
-        {{ section.settings.title }}
-      </h2>
+<style>
+  .reviews-section {
+    background-color: {{ section.settings.section_background }};
+    padding: 60px 20px;
+  }
+
+  .reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .reviews-header h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+  }
+
+  .reviews-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  .stars {
+    display: flex;
+    gap: 4px;
+    font-size: 20px;
+  }
+
+  .star { color: #F5A623; }
+
+  .rating-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .reviews-count {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .reviews-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  }
+
+  @media (max-width: 480px) {
+    .reviews-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
+
+  .review-card {
+    background-color: {{ section.settings.card_background }};
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .review-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  .review-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .review-info { flex: 1; }
+
+  .review-name {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 14px;
+  }
+
+  .review-location {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .review-stars {
+    display: flex;
+    gap: 3px;
+    margin-top: 4px;
+  }
+
+  .review-star { color: #F5A623; font-size: 14px; }
+
+  .review-title {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .review-title::before,
+  .review-title::after { content: '"'; }
+
+  .review-text {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .review-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #999;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+  }
+
+  .verified-badge {
+    color: #00a341;
+    font-weight: 600;
+  }
+
+  .reviews-cta { text-align: center; }
+
+  .reviews-button {
+    background-color: {{ section.settings.button_color }};
+    color: white;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+
+  .reviews-button:hover { opacity: 0.9; }
+</style>
+
+<section class="reviews-section">
+  <div class="reviews-container">
+
+    {% if section.settings.title %}
+      <div class="reviews-header">
+        <h2>{{ section.settings.title }}</h2>
+        <div class="reviews-rating">
+          <div class="stars">
+            {% assign rating_floor = section.settings.overall_rating | floor %}
+            {% for i in (1..5) %}
+              {% if i <= rating_floor %}
+                <span class="star">★</span>
+              {% else %}
+                <span class="star" style="color: #ddd;">★</span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <span class="rating-text">{{ section.settings.overall_rating }}</span>
+        </div>
+        <p class="reviews-count">{{ section.settings.reviews_count }}</p>
+      </div>
     {% endif %}
 
-    <div style="display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;font-size:14px;">
-      <span style="font-weight:600;color:#111;">{{ section.settings.trustpilot_label }}</span>
-      <span style="display:inline-flex;gap:2px;">
-        {% for i in (1..5) %}
-          <span style="background:#00b67a;color:#fff;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">★</span>
-        {% endfor %}
-      </span>
-      <span style="color:#555;">{{ section.settings.trust_text }}</span>
-    </div>
-  </div>
-
-  <div style="position:relative;max-width:1400px;margin:0 auto;">
-
-    <div id="reviews-{{ section.id }}" style="
-      display:flex;
-      gap:18px;
-      overflow-x:auto;
-      scroll-snap-type:x mandatory;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:none;
-      padding:10px 20px 30px;">
-
+    <div class="reviews-grid">
       {% for block in section.blocks %}
-        <div style="
-          flex:0 0 320px;
-          scroll-snap-align:start;
-          background:#fff;
-          border:1px solid #eee;
-          border-radius:14px;
-          overflow:hidden;
-          box-shadow:0 4px 14px rgba(0,0,0,0.05);
-          display:flex;
-          flex-direction:column;">
-
-          {% if block.settings.image != blank %}
-            <div style="width:100%;aspect-ratio:4/3;overflow:hidden;">
-              {%- assign img_url = block.settings.image | image_url: width: 720 -%}
-              <img src="{{ img_url }}"
-                   width="{{ block.settings.image.width }}"
-                   height="{{ block.settings.image.height }}"
-                   loading="lazy"
-                   alt=""
-                   style="width:100%;height:100%;object-fit:cover;display:block;">
-            </div>
-          {% endif %}
-
-          <div style="padding:18px 20px 22px;">
-
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-              <span style="display:inline-flex;gap:1px;">
-                {% for i in (1..5) %}
-                  <span style="background:#00b67a;color:#fff;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;">★</span>
-                {% endfor %}
-              </span>
-              <span style="color:#888;font-size:13px;">{{ block.settings.date }}</span>
+        {% if block.type == 'review' %}
+          <div class="review-card" {{ block.shopify_attributes }}>
+            <div class="review-header">
+              <div class="review-avatar" style="background-color: {{ block.settings.avatar_color }};">
+                {% if block.settings.customer_photo %}
+                  <img src="{{ block.settings.customer_photo | image_url: width: 96 }}" alt="{{ block.settings.customer_name }}">
+                {% else %}
+                  {{ block.settings.customer_name | slice: 0 }}
+                {% endif %}
+              </div>
+              <div class="review-info">
+                <div class="review-name">{{ block.settings.customer_name }}</div>
+                <div class="review-location">{{ block.settings.customer_location }}</div>
+                <div class="review-stars">
+                  {% for i in (1..5) %}
+                    {% if i <= block.settings.rating %}
+                      <span class="review-star">★</span>
+                    {% else %}
+                      <span class="review-star" style="color: #ddd;">★</span>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
             </div>
 
-            <h3 style="font-size:15px;font-weight:700;color:#111;margin:0 0 10px;">
-              {{ block.settings.review_title }}
-            </h3>
+            <div class="review-title">{{ block.settings.review_title }}</div>
+            <div class="review-text">{{ block.settings.review_text }}</div>
 
-            <p style="font-size:14px;line-height:1.55;color:#444;margin:0 0 16px;">
-              "{{ block.settings.review_text }}"
-            </p>
-
-            <p style="font-size:14px;font-weight:700;color:#111;margin:0;">
-              {{ block.settings.author }}
-            </p>
-
+            <div class="review-footer">
+              <span class="verified-badge">✅ Achat vérifié</span>
+              <span>·</span>
+              <span>{{ block.settings.review_date }}</span>
+            </div>
           </div>
-        </div>
+        {% endif %}
       {% endfor %}
-
     </div>
+
+    {% if section.settings.button_text != blank and section.settings.button_link != blank %}
+      <div class="reviews-cta">
+        <a href="{{ section.settings.button_link }}" class="reviews-button">
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+    {% endif %}
+
   </div>
-
-  <style>
-    #reviews-{{ section.id }}::-webkit-scrollbar { display: none; }
-    @media (max-width: 768px) {
-      #reviews-{{ section.id }} > div { flex: 0 0 85%; }
-    }
-  </style>
-
 </section>
 
 {% schema %}
 {
-  "name": "Avis Clients",
+  "name": "Avis clients",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Titre principal",
-      "default": "Don't take our word for it"
+      "label": "Titre de la section",
+      "default": "Nos clients nous font confiance"
+    },
+    {
+      "type": "range",
+      "id": "overall_rating",
+      "label": "Note globale",
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "default": 4.8
     },
     {
       "type": "text",
-      "id": "trustpilot_label",
-      "label": "Label étoiles",
-      "default": "Excellent"
-    },
-    {
-      "type": "text",
-      "id": "trust_text",
-      "label": "Texte de confiance",
-      "default": "Trusted by 40,000+ Men"
+      "id": "reviews_count",
+      "label": "Nombre d'avis",
+      "default": "127 avis vérifiés"
     },
     {
       "type": "color",
-      "id": "bg_color",
+      "id": "section_background",
       "label": "Couleur de fond",
-      "default": "#fafafa"
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Couleur des cartes",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Couleur du bouton CTA",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texte du bouton CTA",
+      "default": "Voir tous les avis"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Lien du bouton CTA"
     }
   ],
   "blocks": [
     {
       "type": "review",
-      "name": "Avis client",
+      "name": "Avis",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Photo du client"
+          "type": "text",
+          "id": "customer_name",
+          "label": "Prénom et initiale",
+          "default": "Thomas M."
         },
         {
           "type": "text",
-          "id": "date",
-          "label": "Date",
-          "default": "09/02/2026"
+          "id": "customer_location",
+          "label": "Ville / Pays",
+          "default": "Paris, France"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Note (étoiles)",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
         },
         {
           "type": "text",
           "id": "review_title",
           "label": "Titre de l'avis",
-          "default": "The best gift for a man with thin hair"
+          "default": "Excellent produit !"
         },
         {
           "type": "textarea",
           "id": "review_text",
           "label": "Texte de l'avis",
-          "default": "Clearly my best discovery this year. This powder works instantly and the density effect is totally natural."
+          "default": "Très satisfait de mon achat. Produit de qualité, livraison rapide et service client réactif."
         },
         {
           "type": "text",
-          "id": "author",
-          "label": "Nom + Ville",
-          "default": "James T. New York"
+          "id": "review_date",
+          "label": "Date",
+          "default": "Il y a 3 jours"
+        },
+        {
+          "type": "image_picker",
+          "id": "customer_photo",
+          "label": "Photo du client (optionnel)"
+        },
+        {
+          "type": "color",
+          "id": "avatar_color",
+          "label": "Couleur de l'avatar",
+          "default": "#b8a060"
         }
       ]
     }
   ],
-  "max_blocks": 20,
   "presets": [
     {
-      "name": "Avis Clients",
+      "name": "Avis clients",
       "blocks": [
-        { "type": "review" },
-        { "type": "review" },
-        { "type": "review" },
-        { "type": "review" }
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Thomas M.",
+            "customer_location": "Paris, France",
+            "rating": 5,
+            "review_title": "Excellent produit !",
+            "review_text": "Très satisfait de mon achat. Produit de qualité, livraison rapide et service client réactif. Je recommande sans hésiter !",
+            "review_date": "Il y a 3 jours",
+            "avatar_color": "#b8a060"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Sophie L.",
+            "customer_location": "Lyon, France",
+            "rating": 5,
+            "review_title": "Je recommande vivement",
+            "review_text": "Commande reçue rapidement et bien emballée. Le produit correspond parfaitement à la description. Très belle qualité.",
+            "review_date": "Il y a 1 semaine",
+            "avatar_color": "#7c3aed"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "customer_name": "Marc D.",
+            "customer_location": "Marseille, France",
+            "rating": 4,
+            "review_title": "Très bon rapport qualité-prix",
+            "review_text": "Produit conforme aux attentes. Seul bémol : délai de livraison un peu long, mais la qualité est au rendez-vous.",
+            "review_date": "Il y a 2 semaines",
+            "avatar_color": "#00a341"
+          }
+        }
       ]
     }
   ]
