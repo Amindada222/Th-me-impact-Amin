@@ -217,9 +217,9 @@
             "default_tab": "automatic",
             "only_photos": false,
             "hide_thumbnails": false,
-            "product_handle": "",
+            "product_handle": "kravyn",
             "aggregated": true,
-            "data-limit": 20,
+            "data-limit": 6,
             "maxwidth": 1080,
             "is_sample": true
           }
@@ -239,25 +239,6 @@
     },
     "177767113360b87a69": {
       "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_agg_section_RPtfFA": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "reviews_to_display": "product_reviews_only",
-            "default_tab": "automatic",
-            "only_photos": false,
-            "hide_thumbnails": false,
-            "product_handle": "kravyn",
-            "aggregated": true,
-            "data-limit": 9,
-            "maxwidth": 1080,
-            "is_sample": true
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_agg_section_RPtfFA"
-      ],
       "settings": {
         "full_width": true,
         "remove_vertical_spacing": true,
